@@ -1,0 +1,58 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Progamaholics Anonymous</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="ProAnonStyle.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <table style="padding: 10px; border: 1px solid black; width:75%; margin: auto; ">
+            <tr style="background-color: lightgrey; text-align: center; width: 95%">
+            <td colspan="1">
+                <!---page header -->
+                <h1>Programaholics Anonymous</h1>
+                <h2>Controlling the Addiction since Y2K</h2>
+                <!--page subtitle -->
+                <strong><span style="color: red;">
+                    <asp:Label ID="lblSubtitle" Runat="server">Welcome Fellow Addicts</asp:Label></span></strong>
+            </td>
+            </tr>
+            <tr style="vertical-align: top;">
+            <td style ="margin: auto;">
+                <!--User Content Area -->
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" Runat="server">
+                </asp:ContentPlaceHolder>
+            </td>
+             </tr>
+                 <tr style ="text-align: left; padding-top: 5em;">
+                    <td>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" Runat="server">
+                        </asp:ContentPlaceHolder>
+                </td>
+                  </tr>
+            <tr style="vertical-align: top;">
+            <td style ="margin: auto;">
+                <!--User Content Area -->
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder3" Runat="server">
+                </asp:ContentPlaceHolder>
+            </td>
+            </tr>
+                    <tr style="background-color: lightgrey; text-align: center; width: 75%; margin: auto;">
+                        <td style="background-color: inherit;">
+                            <!-- page footer -->
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder4" runat="server">
+                                Programaholic Anonymous.com was designed and coded by Tyler Estler<br />
+                                Copyright: 2016<br />
+                                Owner: Tyler Estler<br />
+                            </asp:ContentPlaceHolder>
+                            </td>
+                        </tr>
+        </table>
+    </form>
+</body>
+</html>
